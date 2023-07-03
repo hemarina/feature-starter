@@ -18,7 +18,7 @@ check_packages() {
 
 echo "(*) Ensuring dependencies are installed"
 
-check_packages apt-transport-https curl ca-certificates
+check_packages apt-transport-https curl ca-certificates xdg-utils
 check-packages $(apt-cache search '^libicu[0-9]+$' | cut -d' ' -f1)
 
 echo "(*) Installing Azure Developer CLI"
