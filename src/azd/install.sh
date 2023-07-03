@@ -7,7 +7,7 @@
 AZD_VERSION=${VERSION:-"stable"}
 
 check_packages() {
-    if ! dpkg -s "$@" >/dev/null 2>&1; then
+    if ! dpkg -s "$@" > /dev/null 2>&1; then
         if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
             echo "Running apt-get update..."
             apt-get update -y
@@ -19,7 +19,7 @@ check_packages() {
 echo "(*) Ensuring dependencies are installed"
 
 check_packages apt-transport-https curl ca-certificates xdg-utils
-check-packages $(apt-cache search '^libicu[0-9]+$' | cut -d' ' -f1)
+check_packages $(apt-cache search '^libicu[0-9]+$' | cut -d' ' -f1)
 
 echo "(*) Installing Azure Developer CLI"
 
