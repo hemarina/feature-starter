@@ -1,5 +1,5 @@
 {
-    "id": "azd",
+    "id": "test-azd",
     "version": "0.1.0",
     "name": "Azure Developer CLI",
     "documentationURL": "https://github.com/azure/azure-dev/tree/main/ext/devcontainer/src/azd",
