@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - azd
+          - test-azd
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -31,7 +31,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - azd
+          - test-azd
     steps:
       - uses: actions/checkout@v3
 
