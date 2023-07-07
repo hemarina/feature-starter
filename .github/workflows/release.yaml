@@ -4,8 +4,9 @@ on:
 
 jobs:
   call-workflow-test:
-    if: ${{ success() }}
     uses: "./.github/workflows/test.yaml"
+    strategy:
+      fail-fast: true
 
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
