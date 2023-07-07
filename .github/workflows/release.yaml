@@ -4,6 +4,7 @@ on:
 
 jobs:
   call-workflow-test:
+    if: ${{ success() }}
     uses: "./.github/workflows/test.yaml"
 
   deploy:
